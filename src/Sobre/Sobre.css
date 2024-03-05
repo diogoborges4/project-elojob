@@ -1,0 +1,55 @@
+.container {
+  display: flex;
+  z-index: 99999;
+  flex-direction: row;
+  align-items: center;
+  margin-top: -25px;
+  height: 100vh;
+  background: url("../imgs/ashe_league_of_legends_4k-3840x2160.jpg");
+  background-size: cover;
+}
+@media (max-width: 900px) {
+  .container {
+    max-width: 100%;
+    margin-top: -30px;
+    background-size: auto;
+    background-repeat: no-repeat;
+    background-position: right;
+  }
+}
+
+.Title-about {
+  width: 400px;
+  margin-left: 60%;
+  font-size: 20px;
+  color: #c9c9c9;
+  background: linear-gradient(
+    300deg,
+    rgba(12, 19, 31, 0.75) 14.48%,
+    rgba(12, 19, 31, 0) 88.66%
+  );
+}
+@media (max-width: 900px) {
+  .Title-about {
+    max-width: 500px;
+    margin-top: -30%;
+    margin-left: 5px;
+    color: #c9c9c9;
+    background: linear-gradient(
+      360deg,
+      rgba(12, 19, 31, 0.75) 25.48%,
+      rgba(12, 19, 31, 0) 5% rgba(12, 19, 31, 0.75) 10%
+    );
+  }
+}
+
+@media (max-width: 900px) {
+  .Title-about h3 {
+    font-size: 20px;
+  }
+}
+
+.img-about img {
+  width: 400px;
+  height: auto;
+}

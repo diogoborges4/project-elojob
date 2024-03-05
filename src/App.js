@@ -1,23 +1,24 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import { CyberNinja } from "./CyberNinja/CyberNinja";
+import Sobre from "./Sobre/Sobre";
+import Contatos from "./Contatos/Contatos";
+import Footer from "./Footer/Footer";
+import { useState } from "react";
 
 function App() {
+  const [elementoAlvoRef, setElementoAlvoRef] = useState(null);
+
+  const scrollToElement = () => {
+    if (elementoAlvoRef.current) {
+      elementoAlvoRef.current.scrollIntoView({ behavior: "smooth" });
+    }
+  };
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <CyberNinja scrollToElement={scrollToElement} />
+      <Sobre setElementoAlvoRef={setElementoAlvoRef} />
+      <Contatos />
+      <Footer />
     </div>
   );
 }

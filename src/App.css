@@ -1,5 +1,12 @@
 .App {
+  max-width: 100%;
+  height: auto;
   text-align: center;
+}
+@media (max-width: 500px) {
+  .App {
+    max-width: 100%;
+  }
 }
 
 .App-logo {
