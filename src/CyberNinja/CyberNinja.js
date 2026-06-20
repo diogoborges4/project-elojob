@@ -1,5 +1,4 @@
-import * as React from "react";
-import { useState } from "react";
+import React, { useState } from "react";
 import Modal from "react-modal";
 import "./CyberNinja.css";
 import Img1 from "../imgs/8.png";
@@ -23,175 +22,127 @@ export function CyberNinja({ scrollToElement }) {
   function closeModal() {
     setIsOpen(false);
   }
+
+  const WHATSAPP_LINK = "https://api.whatsapp.com/send?phone=5511999151515&text=Ol%C3%A1,%20tenho%20interesse%20nos%20servi%C3%A7os%20de%20elo%20job!";
+
   return (
-    <div className="div">
-      <div className="img-person">
-        <img src={ImgPerson} alt="" />
-      </div>
-      <div className="div-2">
-        <div className="div-3">
-          <div className="div-4">ELOPROJECT</div>
-          <div className="div-5">
-            <div className="div-6">HOME</div>
-            <div className="div-7">
-              <button onClick={scrollToElement}>SOBRE</button>
-            </div>
-            <button className="div-8" onMouseMove={openModal}>
-              ELOJOBS
-            </button>
-            <Modal
-              isOpen={isOpen}
-              onRequestClose={closeModal}
-              contentLabel="Example modal"
-              overlayClassName="modal-overlay"
-              className="modal-content"
+    <>
+      <section className="hero-container">
+        <nav className="hero-nav">
+          <div className="hero-logo">ELOPROJECT</div>
+          <div className="hero-menu">
+            <button className="nav-link">HOME</button>
+            <button className="nav-link" onClick={scrollToElement}>SOBRE</button>
+            <button className="nav-link" onClick={openModal}>ELOJOBS</button>
+            <a href="https://www.instagram.com/" target="_blank" rel="noreferrer" className="nav-social">
+              <img src={InstaImg} alt="Instagram" style={{ filter: 'brightness(0) invert(1)' }} />
+            </a>
+          </div>
+        </nav>
+
+        <div className="hero-content">
+          <div className="hero-text">
+            <h1 className="hero-title">Conquiste o elo que você merece</h1>
+            <p className="hero-desc">
+              Alcance o topo das ranqueadas com nossa equipe de jogadores profissionais. 
+              Serviços rápidos, seguros e com a melhor taxa de vitórias do mercado.
+            </p>
+            <a
+              href="https://discord.com/channels/1122575432236159066/1122575432236159069"
+              target="_blank"
+              rel="noreferrer"
             >
-              <button className="modal-btn" onMouseLeave={closeModal}>
-                <h1>Selecione seu estilo</h1>
-                <a
-                  href="https://api.whatsapp.com/send?phone=5511999151515&text=Ol%C3%A1,%20tenho%20interesse%20nos%20servi%C3%A7os%20de%20elo%20job!"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  <button>Elojob</button>
-                  <button>MD5</button>
-                  <button>Duo Boost</button>
-                  <button>EloJob</button>
-                </a>
+              <button className="hero-btn">
+                Acesse nosso discord
+                <img src={ImgDisc} alt="Discord" style={{ filter: 'brightness(0) invert(1)' }} />
               </button>
-            </Modal>
-            <button className="btn-login">
-              <a
-                href="https://www.instagram.com/"
-                target="_blank"
-                rel="noreferrer"
-              >
-                <img src={InstaImg} alt="" />
-              </a>
-            </button>
+            </a>
+          </div>
+          <div className="hero-image">
+            <img src={ImgPerson} alt="Yasuo Render" />
           </div>
         </div>
-        <div className="div-9">CONQUISTE O ELO QUE VOCÊ MERECE</div>
-        <div className="div-10">
-          Lorem Ipsum is simply dummy text of the printing and typesetting
-          industry. Lorem Ipsum has been the industry's standard dummy text ever
-          since the 1500s,
-        </div>
-        <div className="btn-home">
-          <a
-            href="https://discord.com/channels/1122575432236159066/1122575432236159069"
-            target="_blank"
-            rel="noreferrer"
-          >
-            <button className="div-11-1">
-              Acesse nosso discord
-              <img src={ImgDisc} alt="" />
-            </button>
+
+        <Modal
+          isOpen={isOpen}
+          onRequestClose={closeModal}
+          contentLabel="Escolha o Serviço"
+          className="modal-content glass-panel"
+        >
+          <h1>Selecione seu estilo</h1>
+          <a href={WHATSAPP_LINK} target="_blank" rel="noreferrer">
+            <div className="modal-btn-grid">
+              <button className="modal-option-btn">Elojob</button>
+              <button className="modal-option-btn">MD5</button>
+              <button className="modal-option-btn">Duo Boost</button>
+              <button className="modal-option-btn">Coaching</button>
+            </div>
+          </a>
+        </Modal>
+      </section>
+
+      <section className="services-grid">
+        <div className="service-card glass-panel">
+          <div className="service-icon-wrapper">
+            <img className="service-icon" src={Img1} alt="Elojob" />
+          </div>
+          <h3 className="service-title">ELOJOB</h3>
+          <p className="service-desc">
+            Um jogador de alto nível irá jogar em sua conta e garantir o elo desejado de forma rápida e segura.
+          </p>
+          <a href={WHATSAPP_LINK} target="_blank" rel="noreferrer" style={{ width: '100%' }}>
+            <button className="service-btn">Contratar</button>
           </a>
         </div>
-      </div>
-      <div className="div-12">
-        <div className="div-13">
-          <div className="div-24">
-            <div className="div-25">
-              <img className="img-4" src={Img1} alt="elopng" />
-              <div className="div-26">ELOJOB</div>
-            </div>
-            <div className="div-27">
-              <div className="div-28">
-                Um jogador de alto nível irá jogar em sua conta e garantir o elo
-                desejado de forma rápida.
-              </div>
-              <div className="div-29">
-                <a
-                  href="https://api.whatsapp.com/send?phone=5511999151515&text=Ol%C3%A1,%20tenho%20interesse%20nos%20servi%C3%A7os%20de%20elo%20job!"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  CONTRATAR
-                </a>
-              </div>
-            </div>
+
+        <div className="service-card glass-panel">
+          <div className="service-icon-wrapper">
+            <img className="service-icon" src={Img2} alt="Duo Boost" />
           </div>
+          <h3 className="service-title">DUO BOOST</h3>
+          <p className="service-desc">
+            Você irá jogar duo com um jogador profissional até o elo desejado. Aprenda enquanto sobe.
+          </p>
+          <a href={WHATSAPP_LINK} target="_blank" rel="noreferrer" style={{ width: '100%' }}>
+            <button className="service-btn">Contratar</button>
+          </a>
         </div>
-        <div className="div-13">
-          <div className="div-24">
-            <div className="div-25">
-              <img loading="lazy" src={Img2} className="img-4" alt="img" />
-              <div className="div-26">DUO BOOST</div>
-            </div>
-            <div className="div-27">
-              <div className="div-28">
-                Você irá jogar duo com um jogador profissional até o elo
-                desejado.
-              </div>
-              <div className="div-29">
-                <a
-                  href="https://api.whatsapp.com/send?phone=5511999151515&text=Ol%C3%A1,%20tenho%20interesse%20nos%20servi%C3%A7os%20de%20elo%20job!"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  CONTRATAR
-                </a>
-              </div>
-            </div>
+
+        <div className="service-card glass-panel">
+          <div className="service-icon-wrapper">
+            <img className="service-icon" src={Img3} alt="MD5" />
           </div>
+          <h3 className="service-title">MD5</h3>
+          <p className="service-desc">
+            Iremos garantir o melhor desempenho possível na sua classificatória inicial, com alta taxa de vitória.
+          </p>
+          <a href={WHATSAPP_LINK} target="_blank" rel="noreferrer" style={{ width: '100%' }}>
+            <button className="service-btn">Contratar</button>
+          </a>
         </div>
-        <div className="div-13">
-          <div className="div-24">
-            <div className="div-25">
-              <img loading="lazy" src={Img3} className="img-4" alt="img" />
-              <div className="div-26">MD5</div>
-            </div>
-            <div className="div-27">
-              <div className="div-28">
-                Iremos garantir o melhor desempenho possível na sua
-                classificatória.
-              </div>
-              <div className="div-29">
-                <a
-                  href="https://api.whatsapp.com/send?phone=5511999151515&text=Ol%C3%A1,%20tenho%20interesse%20nos%20servi%C3%A7os%20de%20elo%20job!"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  CONTRATAR
-                </a>
-              </div>
-            </div>
+
+        <div className="service-card glass-panel">
+          <div className="service-icon-wrapper">
+            <img className="service-icon" src={Img4} alt="Coaching" />
           </div>
+          <h3 className="service-title">COACHING</h3>
+          <p className="service-desc">
+            Melhore sua gameplay através de aulas práticas e análise de VOD com profissionais da área.
+          </p>
+          <a href={WHATSAPP_LINK} target="_blank" rel="noreferrer" style={{ width: '100%' }}>
+            <button className="service-btn">Contratar</button>
+          </a>
         </div>
-        <div className="div-13">
-          <div className="div-24">
-            <div className="div-25">
-              <img loading="lazy" src={Img4} className="img-4" alt="img" />
-              <div className="div-26">COACHING</div>
-            </div>
-            <div className="div-27">
-              <div className="div-28">
-                Melhore sua gameplay através de aulas práticas com profissionais
-                da área.
-              </div>
-              <div className="div-29">
-                <a
-                  href="https://api.whatsapp.com/send?phone=5511999151515&text=Ol%C3%A1,%20tenho%20interesse%20nos%20servi%C3%A7os%20de%20elo%20job!"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  CONTRATAR
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+      </section>
+
       <a
-        className="linkWhats"
-        href="https://api.whatsapp.com/send?phone=5511999151515&text=Ol%C3%A1,%20tenho%20interesse%20nos%20servi%C3%A7os%20de%20elo%20job!"
+        className="whatsapp-float"
+        href={WHATSAPP_LINK}
         target="_blank"
         rel="noreferrer"
       >
-        <img src={WhatsImg} alt="" />
+        <img src={WhatsImg} alt="WhatsApp" />
       </a>
-    </div>
+    </>
   );
 }

@@ -1,33 +1,40 @@
 import React from "react";
 import "./Footer.css";
-import ImgExample from "../imgs/Captura de tela 2024-02-27 173618.png";
-import SetaImg from "../logos/pngtree-arrow-shape-red-simple-curved-arrow-png-image_5215891 (1).png";
 
 const Footer = () => {
   return (
-    <div className="footer-container">
-      <div className="func-footer">
-        <h1>Como funciona?</h1>
+    <footer className="footer-container">
+      <div className="footer-content glass-panel">
+        <div className="footer-how-it-works">
+          <h2>Como funciona?</h2>
+          <div className="steps-container">
+            <div className="step-box">
+              <div className="step-number">1</div>
+              <p>Escolha o serviço desejado (Elojob, Duo Boost, MD5, etc).</p>
+            </div>
+            <div className="step-box">
+              <div className="step-number">2</div>
+              <p>Você será redirecionado para o nosso WhatsApp oficial.</p>
+            </div>
+            <div className="step-box">
+              <div className="step-number">3</div>
+              <p>Acertamos os detalhes, pagamento, e iniciamos o serviço!</p>
+            </div>
+          </div>
+        </div>
       </div>
-      <div className="func2-footer">
-        <h3>
-          Escolha o estilo de jogo que você está interessado, nós vamos
-          redirecioná-lo para o whatsApp de um profissional para que seja
-          acertado os detalhes do seu pedido. E pronto, simple e rápido.
-        </h3>
-        <img className="setaImg" src={SetaImg} alt="" />
-        <img className="img-example" src={ImgExample} alt="" />
+      
+      <div className="footer-bottom">
+        <div className="footer-copy">
+          <p className="disclaimer">
+            League of Legends é uma marca registrada da Riot Games, Inc. Nós não somos de nenhuma forma afiliados, 
+            associados ou endossados pela Riot Games, Inc. Todos os direitos autorais, imagens e marcas de serviço 
+            pertencem a seus respectivos proprietários.
+          </p>
+          <p className="copyright">&copy; {new Date().getFullYear()} ELOPROJECT. Todos os direitos reservados.</p>
+        </div>
       </div>
-      <div className="footer-copy">
-        <h4>
-          League of Legends é uma marca registrada da Riot Games, Inc. Nós não
-          somos de nenhuma forma afiliados, associados ou endossado pela Riot
-          Games, Inc. Todos os direitos autoriais, marcas imagens e marcas de
-          serviço pertecem a seus respectivos proprietários.
-        </h4>
-        <h2>&copy; COPYRIGHT 2024 ELOPROJECT </h2>
-      </div>
-    </div>
+    </footer>
   );
 };
 
