@@ -1,70 +1,64 @@
-# Getting Started with Create React App
+# Project Elojob
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Uma plataforma moderna e responsiva focada em serviços de otimização de jogos competitivos (League of Legends e similares), construída com React. O projeto oferece uma vitrine de serviços como Elojob, Duo Boost, MD5 e Coaching, desenhada com uma estética *Dark Mode* de alta performance focada na comunidade gamer.
 
-## Available Scripts
+## 🚀 Funcionalidades
 
-In the project directory, you can run:
+- **Design Premium "Dark Mode":** Uso de cores vibrantes (neon) sob um fundo escuro, transmitindo o ambiente competitivo.
+- **Glassmorphism:** Componentes com efeito visual de vidro (desfoque e transparência) proporcionando profundidade à interface.
+- **Layout Responsivo:** Desenvolvido com CSS Flexbox e Grid para garantir que o site funcione perfeitamente em telas de celular, tablets e desktops.
+- **Micro-interações:** Animações e efeitos de `hover` nas imagens e botões de chamada para ação (CTA).
+- **Redirecionamento Rápido:** Call-to-actions prontos para encaminhar usuários a canais de atendimento direto via WhatsApp e Discord.
 
-### `npm start`
+## 🛠️ Tecnologias Utilizadas
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Este projeto utiliza o ecossistema base do React com algumas customizações de estilo:
+- **React.js** (v18)
+- **Create React App** (react-scripts)
+- **React Modal**
+- **Vanilla CSS** (Variáveis CSS customizadas e Layouts Flex/Grid)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## 📦 Instalação e Execução Local
 
-### `npm test`
+Siga os passos abaixo para rodar a aplicação localmente no seu computador:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+1. **Clone o repositório** (se aplicável):
+   ```bash
+   git clone <url-do-seu-repositorio>
+   ```
 
-### `npm run build`
+2. **Acesse o diretório do projeto**:
+   ```bash
+   cd project-elojob-1
+   ```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+3. **Instale as dependências**:
+   ```bash
+   npm install
+   ```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+4. **Inicie o servidor de desenvolvimento**:
+   ```bash
+   npm start
+   ```
+   *O aplicativo estará disponível no seu navegador no endereço: [http://localhost:3000](http://localhost:3000)*
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## 🏗️ Estrutura do Projeto
 
-### `npm run eject`
+O código fonte está organizado dentro do diretório `src/`:
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+- `/CyberNinja`: Componente contendo o Hero banner principal e a vitrine de serviços interativa.
+- `/Sobre`: Seção apresentando as motivações e estatísticas da plataforma.
+- `/Contatos`: Área dedicada para o usuário entrar em contato pelas redes sociais ou acessar os links.
+- `/Footer`: Rodapé contendo o passo a passo de como funciona o serviço e os direitos autorais.
+- `/imgs` & `/logos`: Imagens estáticas utilizadas ao longo do site.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## 📝 Scripts Disponíveis
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+Neste diretório, você pode rodar os seguintes comandos:
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+- `npm start`: Inicia o app em modo de desenvolvimento.
+- `npm run build`: Cria a versão de produção (build) otimizada do site, pronta para ser hospedada na pasta `build`.
 
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+---
+Desenvolvido para ajudar jogadores a alcançarem o elo que merecem. 🎮
